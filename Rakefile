@@ -8,8 +8,6 @@ task :console =>
 :environment do
   Pry.start
 end
-end
-
 
 namespace :db do
   desc 'migrate changes to your database'
