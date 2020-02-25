@@ -1,3 +1,8 @@
+task :environment do
+  require_relative
+  './config/environment.rb'
+  end
+
 desc 'drop into the Pry console'
 task :console =>
 :environment do
@@ -6,10 +11,6 @@ end
 
 namespace :db do
   desc 'migrate changes to your database'
-  task :environment do
-  require_relative
-  './config/environment.rb'
-  end
   task :migrate => :environment do
     Student.create_table
   end
